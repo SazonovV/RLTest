@@ -1,3 +1,6 @@
-<p>
-  buttons-window works!
-</p>
+<div class="box flex">
+  <button mat-flat-button color="primary" (click)="onConsistently()" class="element">Последовательные запросы</button>
+  <button mat-flat-button color="primary" (click)="onSimultaneously()" class="element">Одновременная отрисовка запросов</button>
+  <mat-progress-bar *ngIf="progressFlag" [mode]="progressMode" [value]="$progressValue | async" class="element"></mat-progress-bar>
+  <div class="element">{{$progressContext | async}}</div>
+</div>

@@ -9,8 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {InMemoryDataService} from './services/in-memory-data.service';
 import { HttpClientModule} from '@angular/common/http';
 import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {MatSelectModule} from '@angular/material';
+import {MatProgressBarModule, MatSelectModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     HttpClientModule,
     MatSelectModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }),
+    MatButtonModule,
+    MatProgressBarModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 }),
   ],
   providers: [],
   bootstrap: [AppComponent]

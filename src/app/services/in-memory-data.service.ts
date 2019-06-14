@@ -12,12 +12,9 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 2, name: 'user3' },
       { id: 3, name: 'user4' },
     ];
-    const firstButton = [
-      { context: 'firstButton'}
-    ];
-    const secondButton = [
-      { context: 'secondButton'}
-    ];
+    const firstButton = 'firstButton';
+    const secondButton = 'secondButton';
+
     return { users, firstButton, secondButton };
   }
 }
